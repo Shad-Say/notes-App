@@ -110,7 +110,7 @@ export class NoteslistComponent implements OnInit {
   }
 
   filter(query: any) {
-    query = query.toLowerCase().trim();
+    query = query.target.value.toLowerCase().trim();
     let allResults: Note[] = new Array<Note>();
     let terms: string[] = query.split(' ');
     terms = this.removeDuplicates(terms);
